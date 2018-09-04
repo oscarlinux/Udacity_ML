@@ -12420,8 +12420,9 @@ Max_depth = 1 is underfitting and it converge to a low score and with max_depth 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> 
-The grid search technique is helpful because with it you can validate and choose the best value for the model's hyper parameters. It helps you to optimize and tune your model by finding the best convination for the hyper parameters. For example in a a support vecor machine model we have the hyper parameters kernel and C. You split your data in 3 datasets (training, validation, test). You use your training dataset to evaluate your model with different values of Kernel and C then you use the  validation dataset to find the F1_score for each convination. Then choose the convination that gives the best F1_score and use you test dataset with that convination to validate that the it is good.</p>
+<p><strong>Answer: </strong></p>
+<p>The grid search technique is helpful because it allows to apply different models to your data and find which model gives the best results. Once you have the best model for your data then you can also use grid search to validate and choose the value for the model's hyper parameters that gives the best performance, in other words, it helps you to optimize and tune your model by finding the convination for the hyperparameters that minimizes the validation error function.</p>
+<p>"A model hyperparameter is a configuration that is external to the model and whose value cannot be estimated from the dataset" refer to <a href="https://machinelearningmastery.com/difference-between-a-parameter-and-a-hyperparameter/">this article</a> for more details comparing model paramaters vs model hyperparameters. For example in a a support vecor machine model we have the hyper parameters kernel and C. You split your data in 3 datasets (training, validation, test). You use your training dataset to evaluate your model with different values of Kernel and C then you use the  validation dataset to find the scoring value for each convination.There are multiple scoring functions that can be used, F1_Score is one of them. Refer to this <a href="http://scikit-learn.org/stable/modules/model_evaluation.html#the-scoring-parameter-defining-model-evaluation-rules">link</a> for common scoring function that can be used with sklearn.metrics. Choose the convination that gives the best score and use your test dataset with this convination to validate that it is good.</p>
 
 </div>
 </div>
@@ -12447,8 +12448,9 @@ The grid search technique is helpful because with it you can validate and choose
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong>
-In k-fold cross-validation technique your data is split into k folds. K-1 folds are used to train the model and the remaining fold is used to test the model. This is done in multiple interactions, in each interaction the test fold is a different subset of the data. Then the perfomance of the model is the average of the perfomance obtained for each interaction. 
-When doing CV the validation set is not required any more in the grid search and automatically this allows to have more samples that can be used to  train and learn the model.</p>
+One of the disadvanatages in grid search is that data gets split in 3 different datasets (training, validation, test) which automatically reduces the number of samples in trainining data set that can be used to train and learn the right hyperparameters convination. This problem can be solve with the cross validation technique. In cross validation the training dataset is splited in the "Cross Validation Trainig Set" and "Cross Validation Testing Set or Validation Set). Hence, it allows to validate and check the model for overfitting during the <a href="https://magoosh.com/data-science/k-fold-cross-validation/">training phase</a>.</p>
+<p>K-fold cross-validation is a type of cross validation. In this technique the training data is split into "k" equal subsets or folds. K-1 folds are used as the cross validation training set and remainig fold is used as the cross validation test set or validation set. This is done in K interactions, in each interaction the validation set is a different fold and each fold is used for validation just one time. The perfomance of the model is the average perfomance obtained for each interaction.</p>
+<p>Using K-fold CV in Grid Search could help to have better results in finding the right convination of hyperparameters. This is becasue the validation for one convination is done multiple times with different validation folds, which could represent better how the model is going to perform with unseen data.</p>
 
 </div>
 </div>
