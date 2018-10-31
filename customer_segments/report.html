@@ -11804,7 +11804,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[200]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -11862,7 +11862,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[201]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display a description of the dataset</span>
@@ -12005,7 +12005,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[202]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Select three indices of your choice you wish to sample from the dataset</span>
@@ -12108,6 +12108,45 @@ div#notebook {
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[204]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[204]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Fresh               8504.0
+Milk                3627.0
+Grocery             4755.5
+Frozen              1526.0
+Detergents_Paper     816.5
+Delicatessen         965.5
+dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12135,9 +12174,9 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong>
-0: Market
-1: Restaurant
-2: Coffee Shop</p>
+Sample 0 - definetelly should be a type of stablishment such as market, milk grocery, frozen, detergent_paper and delicatessen are way beyond the median for each feature.</p>
+<p>Sample 1 - the fresh feature with a value of 14276 stand out more than the rest of the featutes, and it's above the median of 8504. The rest of the features are below the median, but some features such as grocery and delicatessen are somehow close to the median. This sample seems to be some kind of restaurant, because they clearly spend more in the fresh and grocery features.</p>
+<p>Sample 2 - this stablishment doesn't have big expenses and all of their expenses in the different features are below the median. Their expenses have more weight in the fresh, grocery and frozen features. Frozen (774) is the closest to the median (1526). This stablishemnt seems some kind of restaurant as well but smoller than the on in Sample 1, a coffe shop perhaps.</p>
 
 </div>
 </div>
@@ -12471,7 +12510,7 @@ I attempted to predict "Detergents_paper" and the prediction score I got was .83
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="prompt input_prompt">In&nbsp;[205]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">PairGrid</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
@@ -12505,13 +12544,13 @@ No handles with labels found to put in legend.
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[70]:</div>
+<div class="prompt output_prompt">Out[205]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;seaborn.axisgrid.PairGrid at 0x16beba46c50&gt;</pre>
+<pre>&lt;seaborn.axisgrid.PairGrid at 0x16bf2e820f0&gt;</pre>
 </div>
 
 </div>
@@ -12570,7 +12609,7 @@ The data is not normally distributed, it shows a large skew-long tail on the rig
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="prompt input_prompt">In&nbsp;[206]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Scale the data using the natural logarithm</span>
@@ -12634,7 +12673,7 @@ The data is not normally distributed, it shows a large skew-long tail on the rig
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="prompt input_prompt">In&nbsp;[207]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display the log-transformed sample data</span>
@@ -12741,7 +12780,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[128]:</div>
+<div class="prompt input_prompt">In&nbsp;[208]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># For each feature find the data points with extreme high or low values</span>
@@ -12753,7 +12792,7 @@ Once you have performed this implementation, the dataset will be stored in the v
     <span class="n">Q3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">log_data</span><span class="p">[</span><span class="n">feature</span><span class="p">],</span> <span class="mi">75</span><span class="p">)</span>
     
     <span class="c1"># TODO: Use the interquartile range to calculate an outlier step (1.5 times the interquartile range)</span>
-    <span class="n">step</span> <span class="o">=</span> <span class="n">Q3</span> <span class="o">-</span> <span class="n">Q1</span>
+    <span class="n">step</span> <span class="o">=</span> <span class="mf">1.5</span><span class="o">*</span><span class="p">(</span><span class="n">Q3</span> <span class="o">-</span> <span class="n">Q1</span><span class="p">)</span>
     <span class="c1"># Display the outliers</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data points considered outliers for the feature &#39;</span><span class="si">{}</span><span class="s2">&#39;:&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">feature</span><span class="p">))</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">log_data</span><span class="p">[</span><span class="o">~</span><span class="p">((</span><span class="n">log_data</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="p">(</span><span class="n">Q1</span> <span class="o">-</span> <span class="n">step</span><span class="p">))</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">log_data</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="p">(</span><span class="n">Q3</span> <span class="o">+</span> <span class="n">step</span><span class="p">)))])</span>
@@ -12779,229 +12818,81 @@ Once you have performed this implementation, the dataset will be stored in the v
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Data points considered outliers for the feature &#39;Fresh&#39;:
-         Fresh       Milk    Grocery    Frozen  Detergents_Paper  Delicatessen
-53    6.196444   9.256556   9.352881  6.612041          8.632484      5.411646
-65    4.442651   9.950323  10.732651  3.583519         10.095388      7.260523
-66    2.197225   7.335634   8.911530  5.164786          8.151333      3.295837
-81    5.389072   9.163249   9.575192  5.645447          8.964184      5.049856
-95    1.098612   7.979339   8.740657  6.086775          5.407172      6.563856
-96    3.135494   7.869402   9.001839  4.976734          8.262043      5.379897
-97    5.998937   5.537334   6.413459  6.651572          3.988984      4.143135
-98    6.220590   4.718499   6.656727  6.796824          4.025352      4.882802
-128   4.941642   9.087834   8.248791  4.955827          6.967909      1.098612
-159   5.872118   8.949495   9.594378  5.986452          8.996776      5.713733
-170   5.560682   9.068201   9.505246  7.017506          8.855806      5.777652
-171   5.298317  10.160530   9.894245  6.478510          9.079434      8.740337
-173   6.242223   8.945984   9.893690  6.842683          9.193804      6.573680
-174   5.655992   7.096721   8.564268  7.830028          5.030438      7.273786
-181  11.627601  10.296441   9.806316  9.725855          8.506739      9.053687
-184   5.789960   6.822197   8.457443  4.304065          5.811141      2.397895
-193   5.192957   8.156223   9.917982  6.865891          8.633731      6.501290
-218   2.890372   8.923191   9.629380  7.158514          8.475746      8.759669
-266   6.349139   9.186355  10.007036  7.705713          8.493310      7.848934
-272   6.242223   9.026778   8.834774  6.270988          4.532599      6.946976
-299   6.095825   6.778785   7.630461  5.575949          5.669881      5.556828
-304   5.081404   8.917311  10.117510  6.424869          9.374413      7.787382
-305   5.493061   9.468001   9.088399  6.683361          8.271037      5.351858
-327   6.295266   6.801283   7.416980  6.025866          4.477337      6.257668
-338   1.098612   5.808142   8.856661  9.655090          2.708050      6.309918
-340   5.942799   8.300280   9.176784  5.961005          8.891649      7.223296
-342   5.541264   8.658345   8.686598  5.855072          8.432724      7.191429
-353   4.762174   8.742574   9.961898  5.429346          9.069007      7.013016
-355   5.247024   6.588926   7.606885  5.501258          5.214936      4.844187
-357   3.610918   7.150701  10.011086  4.919981          8.816853      4.700480
-392   6.249975   8.338067   8.188689  6.490724          4.804021      6.483107
-412   4.574711   8.190077   9.425452  4.584967          7.996317      4.127134
+        Fresh       Milk    Grocery    Frozen  Detergents_Paper  Delicatessen
+65   4.442651   9.950323  10.732651  3.583519         10.095388      7.260523
+66   2.197225   7.335634   8.911530  5.164786          8.151333      3.295837
+81   5.389072   9.163249   9.575192  5.645447          8.964184      5.049856
+95   1.098612   7.979339   8.740657  6.086775          5.407172      6.563856
+96   3.135494   7.869402   9.001839  4.976734          8.262043      5.379897
+128  4.941642   9.087834   8.248791  4.955827          6.967909      1.098612
+171  5.298317  10.160530   9.894245  6.478510          9.079434      8.740337
+193  5.192957   8.156223   9.917982  6.865891          8.633731      6.501290
+218  2.890372   8.923191   9.629380  7.158514          8.475746      8.759669
+304  5.081404   8.917311  10.117510  6.424869          9.374413      7.787382
+305  5.493061   9.468001   9.088399  6.683361          8.271037      5.351858
+338  1.098612   5.808142   8.856661  9.655090          2.708050      6.309918
+353  4.762174   8.742574   9.961898  5.429346          9.069007      7.013016
+355  5.247024   6.588926   7.606885  5.501258          5.214936      4.844187
+357  3.610918   7.150701  10.011086  4.919981          8.816853      4.700480
+412  4.574711   8.190077   9.425452  4.584967          7.996317      4.127134
 Data points considered outliers for the feature &#39;Milk&#39;:
-         Fresh       Milk    Grocery     Frozen  Detergents_Paper  \
-23   10.180096  10.502956   9.999661   8.547528          8.374938   
-47   10.702480  10.901524  10.925417   8.959569         10.092909   
-61   10.489662  10.555005  10.995377   8.087640         10.192456   
-85    9.687630  10.740670  11.437986   6.933423         10.617099   
-86   10.039983  11.205013  10.377047   6.894670          9.906981   
-97    5.998937   5.537334   6.413459   6.651572          3.988984   
-98    6.220590   4.718499   6.656727   6.796824          4.025352   
-122   9.410174   5.303305   5.501258   7.596392          3.218876   
-154   6.432940   4.007333   4.919981   4.317488          1.945910   
-183  10.514529  10.690808   9.911952  10.505999          5.476464   
-191   9.519588   5.686975   7.230563   6.791221          3.761200   
-269   9.630234   5.552960   7.037028   7.830426          5.808142   
-289  10.663966   5.655992   6.154858   7.235619          3.465736   
-356  10.029503   4.897840   5.384495   8.057377          2.197225   
-
-     Delicatessen  
-23       9.712509  
-47       8.774158  
-61       7.609367  
-85       7.987524  
-86       6.805723  
-97       4.143135  
-98       4.882802  
-122      6.756932  
-154      2.079442  
-183     10.777768  
-191      4.430817  
-269      5.318120  
-289      3.091042  
-356      6.306275  
-Data points considered outliers for the feature &#39;Grocery&#39;:
          Fresh       Milk    Grocery    Frozen  Detergents_Paper  Delicatessen
-47   10.702480  10.901524  10.925417  8.959569         10.092909      8.774158
-61   10.489662  10.555005  10.995377  8.087640         10.192456      7.609367
-75    9.923192   7.036148   1.098612  8.390949          1.098612      6.882437
-85    9.687630  10.740670  11.437986  6.933423         10.617099      7.987524
-122   9.410174   5.303305   5.501258  7.596392          3.218876      6.756932
-131   7.650169   6.378426   5.749393  5.846439          4.248495      5.736572
+86   10.039983  11.205013  10.377047  6.894670          9.906981      6.805723
+98    6.220590   4.718499   6.656727  6.796824          4.025352      4.882802
 154   6.432940   4.007333   4.919981  4.317488          1.945910      2.079442
-161   9.428190   6.291569   5.645447  6.995766          1.098612      7.711101
-275   6.522093   7.383989   5.407172  6.759255          4.564348      5.937536
-333   9.055439   8.513185  11.116886  4.875197         10.548022      7.102499
 356  10.029503   4.897840   5.384495  8.057377          2.197225      6.306275
+Data points considered outliers for the feature &#39;Grocery&#39;:
+        Fresh      Milk   Grocery    Frozen  Detergents_Paper  Delicatessen
+75   9.923192  7.036148  1.098612  8.390949          1.098612      6.882437
+154  6.432940  4.007333  4.919981  4.317488          1.945910      2.079442
 Data points considered outliers for the feature &#39;Frozen&#39;:
-         Fresh       Milk    Grocery     Frozen  Detergents_Paper  \
-16    6.927558   9.084324   9.402695   4.897840          8.413609   
-38    8.431853   9.663261   9.723703   3.496508          8.847360   
-57    8.597297   9.203618   9.257892   3.637586          8.932213   
-59    8.722091   8.586719   8.992184   4.859812          8.033983   
-60    9.058354   8.021256   8.968778   4.564348          8.317522   
-65    4.442651   9.950323  10.732651   3.583519         10.095388   
-93    9.333796   8.035926   7.631432  10.463360          4.262680   
-96    3.135494   7.869402   9.001839   4.976734          8.262043   
-103  10.934570   8.161660   9.094480   9.799681          7.299797   
-106   7.282074   8.754161   9.278373   4.890349          8.829080   
-128   4.941642   9.087834   8.248791   4.955827          6.967909   
-138   9.513182   8.356320   8.523970   5.043425          5.517453   
-144   9.843047   8.209852   7.594884   4.770685          6.246107   
-145  10.000569   9.034080  10.457143   3.737670          9.440738   
-154   6.432940   4.007333   4.919981   4.317488          1.945910   
-175   7.759187   8.967632   9.382106   3.951244          8.341887   
-183  10.514529  10.690808   9.911952  10.505999          5.476464   
-184   5.789960   6.822197   8.457443   4.304065          5.811141   
-196  10.329539   8.883086   8.496378   9.836867          6.637258   
-221   8.593413   8.923058   9.272940   4.510860          8.334952   
-264   6.978214   9.177714   9.645041   4.110874          8.696176   
-325  10.395650   9.728181   9.519735  11.016479          7.148346   
-333   9.055439   8.513185  11.116886   4.875197         10.548022   
-357   3.610918   7.150701  10.011086   4.919981          8.816853   
-379   8.305978   8.549467   9.248695   4.867534          6.700731   
-403  10.150582   9.306196   8.434681   4.844187          6.448889   
-412   4.574711   8.190077   9.425452   4.584967          7.996317   
-413   8.513787   8.488588   8.799812   9.790655          6.815640   
-418   6.492240   9.047115   9.832099   4.890349          8.815815   
-420   8.402007   8.569026   9.490015   3.218876          8.827321   
-429   9.060331   7.467371   8.183118   3.850148          4.430817   
-439   7.932721   7.437206   7.828038   4.174387          6.167516   
-
-     Delicatessen  
-16       6.984716  
-38       6.070738  
-57       7.156177  
-59       7.379632  
-60       5.416100  
-65       7.260523  
-93       7.900266  
-96       5.379897  
-103      7.823246  
-106      7.512618  
-128      1.098612  
-138      8.092851  
-144      5.303305  
-145      8.396155  
-154      2.079442  
-175      7.436617  
-183     10.777768  
-184      2.397895  
-196      7.964156  
-221      5.476464  
-264      7.142827  
-325      8.632128  
-333      7.102499  
-357      4.700480  
-379      5.187386  
-403      5.662960  
-412      4.127134  
-413      7.797702  
-418      6.654153  
-420      7.239215  
-429      7.824446  
-439      3.951244  
+         Fresh      Milk    Grocery     Frozen  Detergents_Paper  Delicatessen
+38    8.431853  9.663261   9.723703   3.496508          8.847360      6.070738
+57    8.597297  9.203618   9.257892   3.637586          8.932213      7.156177
+65    4.442651  9.950323  10.732651   3.583519         10.095388      7.260523
+145  10.000569  9.034080  10.457143   3.737670          9.440738      8.396155
+175   7.759187  8.967632   9.382106   3.951244          8.341887      7.436617
+264   6.978214  9.177714   9.645041   4.110874          8.696176      7.142827
+325  10.395650  9.728181   9.519735  11.016479          7.148346      8.632128
+420   8.402007  8.569026   9.490015   3.218876          8.827321      7.239215
+429   9.060331  7.467371   8.183118   3.850148          4.430817      7.824446
+439   7.932721  7.437206   7.828038   4.174387          6.167516      3.951244
 Data points considered outliers for the feature &#39;Detergents_Paper&#39;:
-         Fresh      Milk   Grocery    Frozen  Detergents_Paper  Delicatessen
-75    9.923192  7.036148  1.098612  8.390949          1.098612      6.882437
-154   6.432940  4.007333  4.919981  4.317488          1.945910      2.079442
-161   9.428190  6.291569  5.645447  6.995766          1.098612      7.711101
-204   7.578657  6.792344  8.561401  7.232010          1.609438      7.191429
-338   1.098612  5.808142  8.856661  9.655090          2.708050      6.309918
-356  10.029503  4.897840  5.384495  8.057377          2.197225      6.306275
-402  10.186371  8.466531  8.535230  5.393628          2.302585      5.828946
+        Fresh      Milk   Grocery    Frozen  Detergents_Paper  Delicatessen
+75   9.923192  7.036148  1.098612  8.390949          1.098612      6.882437
+161  9.428190  6.291569  5.645447  6.995766          1.098612      7.711101
 Data points considered outliers for the feature &#39;Delicatessen&#39;:
          Fresh       Milk    Grocery     Frozen  Detergents_Paper  \
-23   10.180096  10.502956   9.999661   8.547528          8.374938   
-25    9.690604   8.349957   8.935245   5.303305          8.294799   
-42    9.291920   8.929965   9.613202   5.236442          8.839132   
-43    6.445720   9.314250  10.085726   6.668228          9.162095   
-44    9.176784   8.857515   9.256365   6.293419          8.437717   
 66    2.197225   7.335634   8.911530   5.164786          8.151333   
-71    9.814164   7.143618   9.954276   8.589142          8.336390   
-87   10.675099   8.522181   9.001716   8.750208          7.364547   
-88    8.970051   6.295266   8.304495   9.183483          5.105945   
-97    5.998937   5.537334   6.413459   6.651572          3.988984   
 109   7.248504   9.724899  10.274568   6.511745          6.728629   
 128   4.941642   9.087834   8.248791   4.955827          6.967909   
 137   8.034955   8.997147   9.021840   6.493754          6.580639   
 142  10.519646   8.875147   9.018332   8.004700          2.995732   
 154   6.432940   4.007333   4.919981   4.317488          1.945910   
-181  11.627601  10.296441   9.806316   9.725855          8.506739   
 183  10.514529  10.690808   9.911952  10.505999          5.476464   
 184   5.789960   6.822197   8.457443   4.304065          5.811141   
 187   7.798933   8.987447   9.192075   8.743372          8.148735   
-190   9.737197   8.740337   7.591357   8.900004          4.770685   
-191   9.519588   5.686975   7.230563   6.791221          3.761200   
 203   6.368187   6.529419   7.703459   6.150603          6.860664   
 233   6.871091   8.513988   8.106515   6.842683          6.013715   
-270   8.459564   6.939254   6.882437   8.612503          5.283204   
 285  10.602965   6.461468   8.188689   6.948897          6.077642   
 289  10.663966   5.655992   6.154858   7.235619          3.465736   
-303   7.862882   8.212840   9.534523   6.198479          9.217217   
-318   9.375855   7.905810   8.176954   7.659643          6.559615   
 343   7.431892   8.848509  10.177932   7.283448          9.646593   
-375   8.672657   7.279319   7.057898   6.391917          6.165418   
-412   4.574711   8.190077   9.425452   4.584967          7.996317   
-439   7.932721   7.437206   7.828038   4.174387          6.167516   
 
      Delicatessen  
-23       9.712509  
-25       4.043051  
-42       3.828641  
-43       4.276666  
-44       4.174387  
 66       3.295837  
-71       9.579971  
-87       9.571575  
-88       3.828641  
-97       4.143135  
 109      1.098612  
 128      1.098612  
 137      3.583519  
 142      1.098612  
 154      2.079442  
-181      9.053687  
 183     10.777768  
 184      2.397895  
 187      1.098612  
-190      4.158883  
-191      4.430817  
 203      2.890372  
 233      1.945910  
-270      4.025352  
 285      2.890372  
 289      3.091042  
-303      4.077537  
-318      3.931826  
 343      3.610918  
-375      4.248495  
-412      4.127134  
-439      3.951244  
 </pre>
 </div>
 </div>
@@ -13060,7 +12951,7 @@ There are several oulier values' for more than one feature. If using k-means I w
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[135]:</div>
+<div class="prompt input_prompt">In&nbsp;[209]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Apply PCA by fitting the good data with the same number of dimensions as features</span>
@@ -13102,6 +12993,45 @@ There are several oulier values' for more than one feature. If using k-means I w
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[213]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pca_results</span><span class="p">[</span><span class="s1">&#39;Explained Variance&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[213]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Dimension 1    0.4518
+Dimension 2    0.7055
+Dimension 3    0.8265
+Dimension 4    0.9286
+Dimension 5    0.9757
+Dimension 6    1.0000
+Name: Explained Variance, dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -13121,10 +13051,15 @@ There are several oulier values' for more than one feature. If using k-means I w
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p>.7055 of the variance is explained by the first and second principal component, and .9286 is explained by the first four principal components. The more variance of data along a PC, the higher the PC component is ranked. So, Dimension 1 is the dimesion with more variance and "Detergents_Paper" is the feature with more weight with an inverse relationship. Dimension 2 is the second PC with more variance in the data and "Fresh" is teh feature with more weight and inverse relationship. In dimension 3 the "delicatessen" and "fresh" festures have a similar contribution to the variance of the PC. In dimention 4 "frozen" is the feature with more weight and a direct relationship. "milk" is the feature with more direct weight in dimension 5. Lastly, "grocery" i sthe feature with more weight and inverse relationship for dimension 6. The first 4 dimesion contribute with the 92 % of the variance for all the customers data, and these are the PCs that gives more information about customers spending in our data.</p>
+<p>.7055 of the variance is explained by the first and second principal component, and .9286 is explained by the first four principal components. The more variance of data along a PC, the higher the PC component is ranked.</p>
+<p>From the first 4 dimension I can conclude that Deterget_paper is the feature with the strongest correlation in our data, followed by Fresh, delicatessen and frozen. Milk and Grocery are the features with less correlation in our dataset. 
+Analysing each of the first: Dimension 1 is strongly correlated with Detergent_paper but also shows some good correlation with frozen and milk, this principal component increases if detergent_paper, milk and grocery decreas. Dimension 2 has a strong negative correlation with Fresh, followed by frozen and delicatessen. Dimension 3 is strongly correlated with fresh and delicatessen; increasing delicatessen and decreassing fresh increases this dimension. The 4th principal component is strongly correlated with frozen, and it increases when this feature is increased as well.</p>
+<p>Dimension 1 is the dimesion with more variance and "Detergents_Paper" is the feature with more weight with an inverse relationship. Dimension 2 is the second PC with more variance in the data and "Fresh" is teh feature with more weight and inverse relationship. In dimension 3 the "delicatessen" and "fresh" festures have a similar contribution to the variance of the PC. In dimention 4 "frozen" is the feature with more weight and a direct relationship. "milk" is the feature with more direct weight in dimension 5. Lastly, "grocery" i sthe feature with more weight and inverse relationship for dimension 6. The first 4 dimesion contribute with the 92 % of the variance for all the customers data, and these are the PCs that gives more information about customers spending in our data.</p>
 <p>References:
 <a href="https://www.youtube.com/watch?time_continue=80&amp;v=oFBGXUUuKyI">Review/Definition of PCA - class</a>
-<a href="https://www.researchgate.net/post/What_is_the_meaning_of_negative_values_in_components_from_PCA_analysis">What_is_the_meaning_of_negative_values_in_components_from_PCA_analysis</a></p>
+<a href="https://www.researchgate.net/post/What_is_the_meaning_of_negative_values_in_components_from_PCA_analysis">What_is_the_meaning_of_negative_values_in_components_from_PCA_analysis</a>
+<a href="https://onlinecourses.science.psu.edu/stat505/node/54/">Interpretation of the principal components</a>
+<a href="http://setosa.io/ev/principal-component-analysis/">principal component analysis</a></p>
 
 </div>
 </div>
@@ -13973,6 +13908,7 @@ Sample point 2 predicted to be in Cluster 1
 I think the changes do not affect the customers equally. My teory is that customers that spend more (their expenses are above the mean) would be affected negatively. If they spend more then that probably means they run out of products faster thus reducing the delivery service to 3 days per week would force them to buy and store more product, more product demands more space for storage and that could be a problem for them.
 Customers that spend less may react more positively to the delivery changes, but that could be problem for them as well if they do not have enough space for storage.</p>
 <p>Probably customers in segment 1 will be the most affected because they consume a lot of fresh product. If there is not daily deliveries then that probably means that products will not be that fresh.</p>
+<p>One way to prove this theory would be running an A/B test. For the A/B test I would apply the schedule changes to a small sample of the customer's database. According to this <a href="https://www.surveysystem.com/sscalc.htm#one">calculator</a> a good sample size would be 205 customers for a 95% confidetial level based on the 440 samples in our customers dataset. I think running the test for a week or two would be enough to analize the conversion rate of the customers. Based on the output of our first test we hopefully could find the customers segments that will adapt best to the schedule change, and based on this results I would lunch the test again to the other portion of our customers to prove this.</p>
 
 </div>
 </div>
@@ -13995,7 +13931,7 @@ Customers that spend less may react more positively to the delivery changes, but
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong>
-A supervised learner could be used with the Fresh feature as the target. If the Fresh feature is above certain level then that could be the trigger to assign a customer to a daily delivery service.</p>
+A supervised classification learner could be used with the segment_labels and their estimated spending amount on each of the product categories. We could use the original customer dataset to train our model, and later determine the segment for the new customers.</p>
 
 </div>
 </div>
