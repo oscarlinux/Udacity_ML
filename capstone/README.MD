@@ -1,5 +1,5 @@
 ## Sotavento's Wind Energy Power Forecasting
-
+In this project, I am proposing a seq2seq approach using a encoder-decoder LSTM network to forecast wind power production for a short term (8 hours ahead) for the [Sotavento’s wind farm](http://www.sotaventogalicia.com/en/real-time-data/instantaneous-wind-farm) in Galicia, Spain.
 
 Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
