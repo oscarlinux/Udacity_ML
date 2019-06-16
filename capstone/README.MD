@@ -3,7 +3,7 @@ In this project, I am proposing a seq2seq approach using a encoder-decoder LSTM 
 
 
 ## Prerequisites
--	TensorFlow 2.0 Beta
+-	[TensorFlow 2.0 Beta](https://www.tensorflow.org/install)
 -	Sklearn 0.20.3
 -	Pandas 0.24.2
 -	Numpy 1.16.3
